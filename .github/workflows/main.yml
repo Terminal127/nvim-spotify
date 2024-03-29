@@ -12,23 +12,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Check current demo video link
-        id: check-link
-        run: |
-          if grep -q 'spicfy1' README.md; then
-            echo "spicfy1"
-          else
-            echo "spicfy"
-          fi
-
       - name: Debug current link
         run: |
-          current_link=$(echo "${{ steps.check-link.outputs.stdout }}")
+          current_link=$(grep -o 'spicfy1' README.md || echo "spicfy")
           echo "Current link: $current_link"
 
       - name: Update Demo Video Link
         run: |
-          current_link=$(grep -q 'spicfy1' README.md && echo "spicfy1" || echo "spicfy")
           new_link=""
           if [ "$current_link" == "spicfy1" ]; then
             new_link="spicfy"
