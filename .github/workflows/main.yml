@@ -39,4 +39,6 @@ jobs:
           git add README.md
           git status
           git commit -m "Toggle demo video link [skip ci]"
-          git push
+          git push origin main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
