@@ -1,4 +1,4 @@
-![Demo Video](https://github.com/Terminal127/nvim-spotify/blob/main/srcgif/spicfy.gif)
+![Demo Video](https://github.com/Terminal127/nvim-spotify/blob/main/srcgif/spicfy1.gif)
 
 Description:
 Spicfy is a plugin for Neovim that seamlessly integrates Spotify functionality into the text editor environment. It provides users with the ability to search for songs, view search results within a popup window, and play selected songs directly from Neovim. This integration enhances user experience by allowing for convenient access to music playback while coding or working within the editor.
