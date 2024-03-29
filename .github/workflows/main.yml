@@ -27,7 +27,7 @@ jobs:
             new_link="spicfy1"
           fi
           echo "Replacing $current_link with $new_link"
-          sed -i "s|![Demo Video](https://github.com/Terminal127/nvim-spotify/blob/main/srcgif/$current_link.gif)|![Demo Video](https://github.com/Terminal127/nvim-spotify/blob/main/srcgif/$new_link.gif)|g" README.md
+          sed -i "s|(https://github.com/Terminal127/nvim-spotify/blob/main/srcgif/$current_link.gif)|(https://github.com/Terminal127/nvim-spotify/blob/main/srcgif/$new_link.gif)|g" README.md
 
       - name: Debug README.md content
         run: cat README.md
