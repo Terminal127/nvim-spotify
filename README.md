@@ -10,9 +10,8 @@ Key Features:
 
 3. **Interactive Selection**: Users can navigate through the list of search results using familiar Neovim keybindings and select a song to play, enhancing usability and efficiency.
 
-4. **Playback Control**: Spicfy enables users to control playback of selected songs by utilizing the Spotify API. Users can play, pause, skip, and control volume without leaving the Neovim environment.
+4. ***Playback Control***: Spicfy enables users to control playback of selected songs by utilizing the Spotify API. Users can play, pause, skip, and control volume without leaving the Neovim environment. (working)
 
-5. **Visual Feedback**: During the song selection process, Spicfy provides visual feedback to the user through an animation representing the Spotify logo, indicating that the selected song is being played.
 
 Contributing to Spicfy:
 Contributions to Spicfy are highly appreciated and welcome from developers of all skill levels. To contribute, follow these guidelines:
