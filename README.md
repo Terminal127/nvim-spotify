@@ -51,4 +51,4 @@ Contributions to Spicfy are highly appreciated and welcome from developers of al
 
 11. **Celebrate Your Contribution**: Once your pull request is merged, celebrate your contribution to Spicfy! Your efforts help make Spicfy better for all users.
 
-Thank you for your interest in contributing to Spicfy. Your contributions are valuable and contribute to the growth and improvement of the plugin. If you have any questions or need assistance, feel free to reach out to the project maintainers. Happy coding and listening!
+Thank you for your interest in contributing to Spicfy. Your contributions are valuable and contribute to the growth and improvement of the plugin. If you have any questions or need assistance, feel free to reach out to the project maintainers. Happy coding and listening! 👍
