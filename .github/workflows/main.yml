@@ -21,6 +21,11 @@ jobs:
             echo "spicfy"
           fi
 
+      - name: Debug current link
+        run: |
+          current_link=$(echo "${{ steps.check-link.outputs.stdout }}")
+          echo "Current link: $current_link"
+
       - name: Update Demo Video Link
         run: |
           current_link=$(echo "${{ steps.check-link.outputs.stdout }}")
@@ -30,6 +35,7 @@ jobs:
           else
             new_link="spicfy1"
           fi
+          echo "Replacing $current_link with $new_link"
           sed -i "s|![Demo Video](https://github.com/Terminal127/nvim-spotify/blob/main/srcgif/$current_link.gif)|![Demo Video](https://github.com/Terminal127/nvim-spotify/blob/main/srcgif/$new_link.gif)|g" README.md
 
       - name: Commit changes
@@ -37,5 +43,6 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add README.md
+          git status
           git commit -m "Toggle demo video link [skip ci]"
           git push
