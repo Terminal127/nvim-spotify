@@ -42,7 +42,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add README.md
+          git add README.md  # Specify the file to add
           git status
           git commit -m "Toggle demo video link [skip ci]"
-          git push
+          git push origin main  # Assuming you want to push to the 'main' branch
