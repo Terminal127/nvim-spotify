@@ -28,7 +28,7 @@ jobs:
 
       - name: Update Demo Video Link
         run: |
-          current_link=$(echo "${{ steps.check-link.outputs.stdout }}")
+          current_link=$(grep -q 'spicfy1' README.md && echo "spicfy1" || echo "spicfy")
           new_link=""
           if [ "$current_link" == "spicfy1" ]; then
             new_link="spicfy"
@@ -38,11 +38,14 @@ jobs:
           echo "Replacing $current_link with $new_link"
           sed -i "s|![Demo Video](https://github.com/Terminal127/nvim-spotify/blob/main/srcgif/$current_link.gif)|![Demo Video](https://github.com/Terminal127/nvim-spotify/blob/main/srcgif/$new_link.gif)|g" README.md
 
+      - name: Debug README.md content
+        run: cat README.md
+
       - name: Commit changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add README.md  # Specify the file to add
+          git add README.md
           git status
           git commit -m "Toggle demo video link [skip ci]"
-          git push origin main  # Assuming you want to push to the 'main' branch
+          git push
